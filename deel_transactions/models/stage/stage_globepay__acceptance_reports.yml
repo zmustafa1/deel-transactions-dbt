@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: stage_globepay__acceptance_reports
+    description: |
+      tbd
+
+      Granularity: 
+
+    columns:
+      - name: external_ref
+        data_type: string
+        description: ""
+
+      - name: status
+        data_type: boolean
+        description: ""
+
+      - name: source
+        data_type: string
+        description: ""
+
+      - name: ref
+        data_type: string
+        description: ""
+
+      - name: date_time
+        data_type: timestamp
+        description: ""
+
+      - name: state
+        data_type: string
+        description: ""
+
+      - name: cvv_provided
+        data_type: boolean
+        description: ""
+
+      - name: amount
+        data_type: float64
+        description: ""
+
+      - name: country
+        data_type: string
+        description: ""
+
+      - name: currency
+        data_type: string
+        description: ""
+
+      - name: rates
+        data_type: string
+        description: ""
+
+      - name: exchange_rate
+        data_type: float64
+        description: ""
