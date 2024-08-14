@@ -35,5 +35,7 @@ models:
     # Config indicated by + and applies to all files under models/example/
     stage:
       +materialized: view
+    data_mart:
+      +materialized: table
 seeds:
   +schema: deel_transactions
