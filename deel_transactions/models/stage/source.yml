@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: transactions
+    schema:
+      deel_transactions
+
+    tables:
+      - name: globepay_chargeback_report
+        description: tbd
+      
+      - name: globepay_acceptance_report
+        description: tbd
+      
+  
