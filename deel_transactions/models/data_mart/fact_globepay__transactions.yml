@@ -62,40 +62,40 @@ models:
         data_type: boolean
         tests:
           - not_null
-        description: ""
+        description: "Boolean value for if the cvv was provided"
 
       - name: country
         data_type: string
         tests:
           - not_null
-        description: ""
+        description: "The country name"
 
       - name: local_currency
         data_type: string
         tests:
           - not_null
-        description: ""
+        description: "The local currency code"
 
       - name: amount_local_currency
         data_type: float64
         tests:
           - not_null
-        description: ""
+        description: "The amount in local currency"
 
       - name: currency_usd
         data_type: string
         tests:
           - not_null
-        description: ""
+        description: "The USD currency code"
 
       - name: amount_usd
         data_type: float64
         tests:
           - not_null
-        description: ""
+        description: "The amount in USD"
 
       - name: chargeback
         data_type: boolean
         tests:
           - not_null
-        description: ""
+        description: "Boolean value if there was a chargeback on the transaction"
