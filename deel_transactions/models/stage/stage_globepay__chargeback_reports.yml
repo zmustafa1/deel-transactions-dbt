@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stage_globepay__chargeback_reports
+    description: |
+      The stage model for globepay chargebacks
+
+      Granularity: Per external reference ID
+    columns:
+      - name: external_ref
+        data_type: string
+        description: ""
+
+      - name: status
+        data_type: boolean
+        description: ""
+
+      - name: source
+        data_type: string
+        description: ""
+
+      - name: chargeback
+        data_type: boolean
+        description: ""

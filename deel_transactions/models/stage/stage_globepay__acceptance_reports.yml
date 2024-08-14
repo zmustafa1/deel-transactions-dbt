@@ -3,9 +3,9 @@ version: 2
 models:
   - name: stage_globepay__acceptance_reports
     description: |
-      tbd
+      The stage model for globepay acceptance reports
 
-      Granularity: 
+      Granularity: Per transaction
 
     columns:
       - name: external_ref
