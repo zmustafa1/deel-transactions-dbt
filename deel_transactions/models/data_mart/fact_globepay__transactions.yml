@@ -56,7 +56,7 @@ models:
           - not_null
           - accepted_values:
               values: [ACCEPTED, DECLINED]
-        description: "The stage of the transaction"
+        description: "The state of the transaction"
 
       - name: cvv_provided
         data_type: boolean
