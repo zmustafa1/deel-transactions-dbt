@@ -9,4 +9,4 @@ cast(date_trunc(date_time, day) as date) as date
   WHEN currency = 'AUD' THEN CAST(JSON_EXTRACT_SCALAR(rates, '$.AUD') as float64)
   WHEN currency = 'GBP' THEN CAST(JSON_EXTRACT_SCALAR(rates, '$.GBP') as float64)
   end as rate
-  from {{ ref('globepay_acceptance_report') }}
+  from {{ ref('stage_globepay__acceptance_reports') }}
