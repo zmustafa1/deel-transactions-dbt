@@ -1,0 +1,101 @@
+version: 2
+
+models:
+  - name: fact_globepay__transactions
+    description: |
+      The fact table providiing detailed information about globepay transactions
+
+      Granularity: Per transaction (external ref)
+    columns:
+      - name: pk_fact_globepay__transactions
+        data_type: string
+        tests:
+          - unique
+          - not_null
+        description: "The primary key of the table - based on external_ref"
+
+      - name: external_ref
+        data_type: string
+        tests:
+          - not_null
+        description: "The external reference ID"
+
+      - name: status
+        data_type: boolean
+        tests:
+          - not_null
+        description: "The status of the transaction"
+
+      - name: source
+        data_type: string
+        tests:
+          - not_null
+        description: "The source of the transaction"
+
+      - name: ref
+        data_type: string
+        tests:
+          - not_null
+        description: "The reference ID"
+
+      - name: timestamp
+        data_type: timestamp
+        tests:
+          - not_null
+        description: "The timestamp"
+
+      - name: date
+        data_type: date
+        tests:
+          - not_null
+        description: "The date"
+
+      - name: state
+        data_type: string
+        tests:
+          - not_null
+          - accepted_values:
+              values: [ACCEPTED, DECLINED]
+        description: "The stage of the transaction"
+
+      - name: cvv_provided
+        data_type: boolean
+        tests:
+          - not_null
+        description: ""
+
+      - name: country
+        data_type: string
+        tests:
+          - not_null
+        description: ""
+
+      - name: local_currency
+        data_type: string
+        tests:
+          - not_null
+        description: ""
+
+      - name: amount_local_currency
+        data_type: float64
+        tests:
+          - not_null
+        description: ""
+
+      - name: currency_usd
+        data_type: string
+        tests:
+          - not_null
+        description: ""
+
+      - name: amount_usd
+        data_type: float64
+        tests:
+          - not_null
+        description: ""
+
+      - name: chargeback
+        data_type: boolean
+        tests:
+          - not_null
+        description: ""
