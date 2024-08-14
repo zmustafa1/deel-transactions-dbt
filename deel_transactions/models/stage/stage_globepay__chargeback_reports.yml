@@ -7,18 +7,33 @@ models:
 
       Granularity: Per external reference ID
     columns:
+      - name: pk_stage_globepay__chargeback_reports
+        data_type: string
+        tests:
+          - unique
+          - not_null
+        description: "The primary key of the table - based on external_ref"
+
       - name: external_ref
         data_type: string
-        description: ""
+        tests:
+          - not_null
+        description: "The external ref ID"
 
       - name: status
         data_type: boolean
-        description: ""
+        tests:
+          - not_null
+        description: "The status of the transaction"
 
       - name: source
         data_type: string
-        description: ""
+        tests:
+          - not_null
+        description: "The source of the transaction"
 
       - name: chargeback
         data_type: boolean
-        description: ""
+        tests:
+          - not_null
+        description: "The chargeback flag"

@@ -8,50 +8,83 @@ models:
       Granularity: Per transaction
 
     columns:
+      - name: pk_stage_globepay__acceptance_reports
+        data_type: string
+        tests:
+          - unique
+          - not_null
+        description: "The primary key of the table - based on external_ref"
+
       - name: external_ref
         data_type: string
-        description: ""
+        tests:
+          - not_null
+        description: "The external ref ID"
 
       - name: status
         data_type: boolean
-        description: ""
+        tests:
+          - not_null
+        description: "The status of the transaction"
 
       - name: source
         data_type: string
-        description: ""
+        tests:
+          - not_null
+        description: "The source of the transaction"
 
       - name: ref
         data_type: string
-        description: ""
+        tests:
+          - not_null
+        description: "The reference ID"
 
       - name: date_time
         data_type: timestamp
-        description: ""
+        tests:
+          - not_null
+        description: "The timestamp of the transaction"
 
       - name: state
         data_type: string
-        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values: [ACCEPTED, DECLINED]
+        description: "The state of the transaction"
 
       - name: cvv_provided
         data_type: boolean
-        description: ""
+        tests:
+          - not_null
+        description: "Boolean value for if the cvv was provided"
 
       - name: amount
         data_type: float64
-        description: ""
+        tests:
+          - not_null
+        description: "The transaction amount"
 
       - name: country
         data_type: string
-        description: ""
+        tests:
+          - not_null
+        description: "The country name"
 
       - name: currency
         data_type: string
-        description: ""
+        tests:
+          - not_null
+        description: "The local currency code"
 
       - name: rates
         data_type: string
-        description: ""
+        tests:
+          - not_null
+        description: "The exchange rates of various currencies against the USD"
 
       - name: exchange_rate
         data_type: float64
-        description: ""
+        tests:
+          - not_null
+        description: "The exchange rate of the local currency against the USD"
