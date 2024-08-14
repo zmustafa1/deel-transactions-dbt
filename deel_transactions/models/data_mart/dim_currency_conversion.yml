@@ -3,44 +3,15 @@ version: 2
 models:
   - name: dim_currency_conversion
     description: |
-      
+      The dimensional table for currency conversion against the USD
 
-      Granularity: 
-
+      Granularity: Exchange rate per day per currency against the USD
     columns:
-      - name: external_ref
-        data_type: string
+      - name: date
+        data_type: date
         description: ""
 
-      - name: status
-        data_type: boolean
-        description: ""
-
-      - name: source
-        data_type: string
-        description: ""
-
-      - name: ref
-        data_type: string
-        description: ""
-
-      - name: date_time
-        data_type: timestamp
-        description: ""
-
-      - name: state
-        data_type: string
-        description: ""
-
-      - name: cvv_provided
-        data_type: boolean
-        description: ""
-
-      - name: amount
-        data_type: float64
-        description: ""
-
-      - name: country
+      - name: currency_base
         data_type: string
         description: ""
 
@@ -48,10 +19,6 @@ models:
         data_type: string
         description: ""
 
-      - name: rates
-        data_type: string
-        description: ""
-
-      - name: exchange_rate
+      - name: rate
         data_type: float64
         description: ""
