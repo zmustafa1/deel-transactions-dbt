@@ -1,0 +1,16 @@
+version: 2
+
+macro:
+  - name: json_currency_extract
+    docs:
+      show: true
+    description: |
+      A macro created for the case when statement that extracts the currency exchange value
+
+    arguments:
+      - name: currency_code
+        description: "The code the currency"
+
+      - name: column_name
+        description: "The desired name of the column"
+       
